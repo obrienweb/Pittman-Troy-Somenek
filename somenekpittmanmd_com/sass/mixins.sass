@@ -99,24 +99,27 @@ $px30: 1.875em
   border: 1px solid #ccc
 
 =btn()
-  background: $primary-color
+  background: rgb(59, 140, 203)
   color: $white !important
-  padding: 1em 1em
+  padding: 1em 4.8rem
   margin: 15px auto
   height: auto
-  width: 100%
-  max-width: 210px
   text-align: center
   font-size: $font-size
   font-family: $font-stack
   font-weight: 400
   font-style: normal
+  text-transform: uppercase
+  font-weight: 600
+  letter-spacing: 2.288px
   display: inline-block
   +box-sizing
   cursor: pointer
   clear: both
   border: 0
   transform: perspective(1px) translateZ(0px)
+  &:hover, &:focus
+    background: rgb(65, 153, 222)
 
 =circle($background,$color,$border)
   background: $background

@@ -1,20 +1,8 @@
 jQuery(document).ready(function($) {
 
-	// Stellarnav
-	$('.stellarnav').stellarNav({
-		theme: 'plain',
-		phoneBtn: '5555555555',
-		locationBtn: '/contact-us/',
-		sticky : false,
-		closeBtn: true,
-		showArrows: false
+	// Contact form transform
+	$(".contact-info .btn, .cancel-btn").click(function() {
+	  $('.contact-form').toggleClass('transform');
 	});
-
-	$('#slider').flexslider({
-		animation: "fade",
-		directionNav: false,
-		controlNav: false
-	});
-
 
 });

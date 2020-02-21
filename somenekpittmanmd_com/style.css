@@ -1,4 +1,4 @@
-/* Theme Name: Last, First (website.com)
+/* Theme Name: Pittman, Troy Somenek (somenekpittmanmd.com)
  * Author: NKP Development Team
  * Description: NKP Medical responsive theme
  * Template: nkpv2 */
@@ -39,6 +39,7 @@ h1, h2, h3, h4, h5 {
   margin: 0 0 1.5rem;
   font-weight: 300;
   line-height: 1.2;
+  color: #1b1b1b;
 }
 
 #main #content h1:not(:first-of-type), #main #content h2, #main #content h3, #main #content h4, #main #content h5 {
@@ -182,18 +183,19 @@ input, select, textarea {
   border: 1px solid #ccc;
 }
 .sb-form input[type=submit], .footer-form input[type=submit], .newsletter input[type=submit] {
-  background: #1c97d4;
+  background: #3b8ccb;
   color: #fff !important;
-  padding: 1em 1em;
+  padding: 1em 4.8rem;
   margin: 15px auto;
   height: auto;
-  width: 100%;
-  max-width: 210px;
   text-align: center;
   font-size: 1.6rem;
   font-family: "Raleway", arial, sans-serif;
   font-weight: 400;
   font-style: normal;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2.288px;
   display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -202,6 +204,9 @@ input, select, textarea {
   clear: both;
   border: 0;
   transform: perspective(1px) translateZ(0px);
+}
+.sb-form input[type=submit]:hover, .sb-form input[type=submit]:focus, .footer-form input[type=submit]:hover, .footer-form input[type=submit]:focus, .newsletter input[type=submit]:hover, .newsletter input[type=submit]:focus {
+  background: #4199de;
 }
 .sb-form textarea, .footer-form textarea, .newsletter textarea {
   color: #000;
@@ -234,18 +239,19 @@ input, select, textarea {
   border: 1px solid #ccc;
 }
 .contact-form input[type=submit] {
-  background: #1c97d4;
+  background: #3b8ccb;
   color: #fff !important;
-  padding: 1em 1em;
+  padding: 1em 4.8rem;
   margin: 15px auto;
   height: auto;
-  width: 100%;
-  max-width: 210px;
   text-align: center;
   font-size: 1.6rem;
   font-family: "Raleway", arial, sans-serif;
   font-weight: 400;
   font-style: normal;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2.288px;
   display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -254,6 +260,9 @@ input, select, textarea {
   clear: both;
   border: 0;
   transform: perspective(1px) translateZ(0px);
+}
+.contact-form input[type=submit]:hover, .contact-form input[type=submit]:focus {
+  background: #4199de;
 }
 .contact-form textarea {
   color: #000;
@@ -287,19 +296,19 @@ input, select, textarea {
 }
 
 input.placeholder, textarea.placeholder {
-  color: #8b8b8b;
+  color: #5e5e5e;
 }
 input:-moz-placeholder, textarea:-moz-placeholder {
-  color: #8b8b8b;
+  color: #5e5e5e;
 }
 input::-moz-placeholder, textarea::-moz-placeholder {
-  color: #8b8b8b;
+  color: #5e5e5e;
 }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  color: #8b8b8b;
+  color: #5e5e5e;
 }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #8b8b8b;
+  color: #5e5e5e;
 }
 
 .sb-form input[type=submit][disabled], .contact-form input[type=submit][disabled] {
@@ -450,18 +459,19 @@ img.right, img.alignright {
 }
 
 .btn {
-  background: #1c97d4;
+  background: #3b8ccb;
   color: #fff !important;
-  padding: 1em 1em;
+  padding: 1em 4.8rem;
   margin: 15px auto;
   height: auto;
-  width: 100%;
-  max-width: 210px;
   text-align: center;
   font-size: 1.6rem;
   font-family: "Raleway", arial, sans-serif;
   font-weight: 400;
   font-style: normal;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2.288px;
   display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -470,6 +480,9 @@ img.right, img.alignright {
   clear: both;
   border: 0;
   transform: perspective(1px) translateZ(0px);
+}
+.btn:hover, .btn:focus {
+  background: #4199de;
 }
 
 section {
@@ -480,16 +493,14 @@ section {
   background: #3b8ccb;
   color: #fff;
 }
+.blue-bg h2 {
+  color: #fff;
+}
 .blue-bg h2::after {
   background: #fff;
 }
-
-.flex-center {
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
+.blue-bg h3, .blue-bg h4 {
+  color: #fff;
 }
 
 .topbar {
@@ -500,10 +511,32 @@ section {
   font-size: 1.8rem;
 }
 
+.address {
+  padding: 1.6rem;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  color: #5e5e5e;
+  font-size: 1.8rem;
+  border-bottom: 1px solid #dadada;
+}
+.address--divider {
+  color: #1b1b1b;
+  margin: 0 1rem;
+  opacity: 0.4;
+  font-weight: 300;
+}
+
 #logo {
   max-width: 770px;
-  margin: auto;
+  margin: 4rem auto 3rem;
   text-align: center;
+}
+
+.tagline {
+  text-align: center;
+  padding: 0 1.5rem;
 }
 
 #slider {
@@ -519,13 +552,78 @@ section {
   background-image: url(images/banner-main.jpg);
 }
 
+.welcome {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 1.8rem;
+}
+
+.doctors {
+  font-weight: 600;
+  font-size: 2.3rem;
+  color: #5e5e5e;
+}
+.doctors p {
+  margin-top: 2rem;
+  line-height: 1.5;
+}
+
 .contact-footer {
   overflow: hidden;
 }
 
 .contact-info > div {
+  padding: 4rem 0;
   margin: auto;
   max-width: 70%;
+}
+.contact-info > div > * {
+  margin-bottom: 2.4rem;
+}
+.contact-info h2 {
+  margin-bottom: 4rem;
+}
+.contact-info h4:first-of-type {
+  margin-bottom: 4rem;
+}
+.contact-info address {
+  font-style: normal;
+  display: block;
+  color: #5e5e5e;
+  font-size: 1.8rem;
+}
+.contact-info .telephone {
+  font-size: 1.8rem;
+}
+.contact-info .btn {
+  margin-top: 8rem;
+}
+
+.contact-form {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translate3d(-120%, 0px, 0px);
+  transition: transform 0.8s ease 0s, opacity 0.1s ease 0s;
+}
+.contact-form.transform {
+  opacity: 1;
+  transform: translate3d(0%, 0px, 0px);
+}
+.contact-form > div {
+  margin: auto;
+  max-width: 70%;
+}
+.contact-form .cancel-btn {
+  cursor: pointer;
+  padding: 1rem;
+  color: #3b8ccb;
 }
 
 iframe {
@@ -533,112 +631,11 @@ iframe {
   height: 487px;
 }
 
-#main {
-  padding: 40px 0;
-}
-#main #content {
-  position: relative;
-}
-#main #content .feat-img {
-  float: left;
-  margin: 15px;
-  max-width: 100%;
-  height: auto;
-}
-#main #content .single {
-  float: left;
-}
-#main #content .pagination-wrapper {
-  display: flex;
-}
-#main #content .pagination {
-  margin-bottom: 2rem;
-  font-size: 1.6rem;
-}
-#main #content .pagination .current {
-  background: #1c97d4;
-  color: #fff;
-  margin: 4px;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  text-align: center;
-  border: 1px solid #1c97d4;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-}
-#main #content .pagination a {
-  background: transparent;
-  color: #1c97d4;
-  margin: 4px;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  text-align: center;
-  border: 1px solid #1c97d4;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-}
-#main #content .pagination a:hover {
-  background: #1c97d4;
-  color: #fff;
-}
-#main #content li {
-  padding: 5px;
-}
-#main #content ul {
-  margin: 15px 0 15px 20px;
-  clear: none;
-}
-#main #content ol {
-  margin: 0 0 20px 20px;
-  clear: none;
-}
-#main .list {
-  margin: 0 !important;
-  list-style: none !important;
-}
-#main .list ul {
-  margin: 0 !important;
-}
-#main .list ul li {
-  font-size: 1.5rem;
-  margin: 0;
-  padding: 0 !important;
-  list-style: none;
-}
-#main .list ul li a {
-  border-bottom: 1px solid #eee;
-  padding: 1rem 1.5rem;
-  display: block;
-  -webkit-transition: all 0.25s ease-out;
-  -moz-transition: all 0.25s ease-out;
-  -ms-transition: all 0.25s ease-out;
-  transition: all 0.25s ease-out;
-}
-#main .list ul li a:hover {
-  color: #fff;
-  background: #1c97d4;
-  padding-left: 3rem;
-}
-#main .list ul ul {
-  margin-left: 2rem !important;
-}
-
 footer {
   padding: 3rem 0;
   border-top: 1px solid #e2e2e2;
   color: #595959;
+  text-align: center;
 }
 
 .post-divider {
@@ -654,55 +651,99 @@ footer {
 }
 
 /*--- GALLERY RESPONSIVE DESKTOP */
-.patient-content, .patient-listing {
-  width: 48% !important;
-  float: left;
-}
-
-.patient-list-image {
-  width: 90%;
-}
-
-.patient-listing > div {
-  width: 50%;
-  float: left;
-}
-
 /*---- START MEDIA QUERIES ---- */
 @media only screen and (max-width: 767px) {
   /* GALLERY RESPONSIVE NON-DESKTOP */
-  #patient-listing .patient-content {
-    width: 100% !important;
-  }
-  #patient-listing .patient-listing {
-    width: 100% !important;
-  }
-  #patient-listing .patient-listing > div {
-    width: 50%;
-  }
-
-  .patient-entry .patient-single {
-    width: 100%;
+  .m-mt-2 {
+    margin-top: 2rem;
   }
 
   iframe {
     width: 100%;
   }
 
-  .patient-single {
-    width: 100% !important;
+  .btn {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+
+  .address {
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 2rem;
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+    border-bottom: 2px solid #f6f6f6;
+  }
+  .address > * {
+    margin: 1rem 0;
   }
 
   #logo {
     max-width: 216px;
   }
 
-  .contact-form .agreement {
-    margin-top: 0;
+  .tagline {
+    font-size: 1.4rem;
+  }
+
+  .welcome {
+    display: block;
+  }
+  .welcome > div:not(:first-of-type) h4 {
+    margin-top: 2rem;
+  }
+
+  .social img {
+    margin-top: 4rem;
+  }
+
+  .contact-info > div {
+    padding: 4rem 1rem;
+    margin: auto;
+    max-width: 100%;
+  }
+
+  .contact-footer {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-footer > div:first-of-type {
+    order: 2;
+  }
+  .contact-footer > div:last-of-type {
+    order: 1;
+  }
+  .contact-footer iframe {
+    height: 300px;
+  }
+
+  .contact-form {
+    padding-top: 4rem;
+  }
+  .contact-form > div {
+    margin: auto;
+    max-width: 100%;
+  }
+
+  .contact-form input[type=text], .contact-form input[type=email], .contact-form input[type=tel], .contact-form input[type=url], .contact-form textarea {
+    width: 90%;
   }
 }
 /*MOBILE */
+@media only screen and (max-width: 960px) and (min-width: 768px) {
+  .contact-info > div {
+    max-width: 100%;
+  }
+}
 /*TABLET */
+@media only screen and (max-width: 1024px) and (min-width: 960px) {
+  .contact-info > div {
+    max-width: 100%;
+  }
+}
 /*960 DESKTOP */
 /*---- END MEDIA QUERIES ---- */
 

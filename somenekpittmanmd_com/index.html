@@ -15,7 +15,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico">
     <link rel="stylesheet" type="text/css" media="all" href="css/aos.css">
     <link rel="stylesheet" type="text/css" media="all" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,600,700&display=swap" rel="stylesheet">
     <!--if lt IE 9script(src='/wp-content/themes/nkp/unsemantic/js/html5.min.js')
     -->
 
@@ -50,8 +50,11 @@
       Bring this page with you to your consultation and receive a $100 S+P Giftcard
     </div>
 
-    <p>2440 M Street NW, Suite 507 Washington, DC 20037</p>
-    <p>Appointments: <a href="">(202) 810-7700</a></p>
+    <div class="address">
+      <div>2440 M Street NW, Suite 507 Washington, DC 20037</div>
+      <div class="address--divider hide-on-mobile">|</div>
+      <div>Appointments: <a href="">(202) 810-7700</a></div>
+    </div>
 
     <div id="logo" itemscope="" itemtype="http://schema.org/Physician">
       <a itemprop="url" href="#" title="{{{Practice Name}}}, {{{Doctor Name}}}, {{{City}}}, {{{State}}}">
@@ -60,7 +63,7 @@
     </div>
 
     <p>
-      <h1 class="tac">TWO EXPERTS, ONE UNCOMPROMISING STANDARD</h1>
+      <h1 class="tagline">TWO EXPERTS, ONE UNCOMPROMISING STANDARD</h1>
       <div class="tac">
         <img src="images/tailored.webp" alt="" class="img-resp">
       </div>
@@ -69,7 +72,7 @@
     <section class="blue-bg">
       <div class="grid-container">
         <h2>Welcome to the Practice</h2>
-        <div class="flex-center">
+        <div class="welcome">
           <div class="grid-33 tablet-50 tac">
             <h4>Redefining Concierge Care</h4>
             <p>Our upscale office, located in the West End neighborhood, just steps from historic Georgetown, houses the city's dynamic duo of plastic surgery and luxury concierge care at its best.  We strive to provide a variety of services and a one-stop-shop experience that will boost your self-confidence and leave you feeling your best.  Through a thorough consultation process, we explain your options to make sure that you are comfortable with your treatment plan.  We pride ourselves on our team of experts specially trained to address your specific needs.</p>
@@ -103,47 +106,76 @@
         <h2>DC Beauty at its Best</h2>
         <div class="grid-33 tablet-33">
           <h4 class="tac">Surgical Services</h4>
-          <img src="images/surgical-services.webp" alt="Surgical Services" class="img-resp">
-          <p>The practice specializes in rhinoplasty, revision rhinoplasty, face and neck lift, minimally invasive Somenek Signature Lift, breast augmentation, revision breast augmentation, mastopexy / augmentation and tummy tuck.  Both doctors are accomplished restorative surgeons who treat the most complex revision cases for patients who have had suboptimal results in previous operations.  Coming in the late Spring of 2020, we will be introducing a state-of-the-art, on-site, completely private surgical facility, the newest of its kind in the DC area.</p>
+          <div class="tac">
+            <img src="images/surgical-services.webp" alt="Surgical Services" class="img-resp">
+          </div>
+          <p class="tac">The practice specializes in rhinoplasty, revision rhinoplasty, face and neck lift, minimally invasive Somenek Signature Lift, breast augmentation, revision breast augmentation, mastopexy / augmentation and tummy tuck.  Both doctors are accomplished restorative surgeons who treat the most complex revision cases for patients who have had suboptimal results in previous operations.  Coming in the late Spring of 2020, we will be introducing a state-of-the-art, on-site, completely private surgical facility, the newest of its kind in the DC area.</p>
         </div>
         <div class="grid-33 tablet-33">
-          <h4 class="tac">Surgical Services</h4>
-          <img src="images/non-surgical-services.webp" alt="Surgical Services" class="img-resp">
-          <p>Whether it's wrinkle relaxation or restoration of facial volume, we offer a wide variety of injectable treatments that are customized for each patient.  We also understand that not everyone is ready to commit to a surgical procedure. Our, no downtime, non-surgical body contouring program includes non-invasive fat removal with TruSculptID and muscle toning and sculpting with TruSculptFLEX. Stop underarm sweat and odor with a 45-minute MiraDry treatment. Additionally, we offer a full range of hair restoration procedures and laser skin resurfacing.</p>
+          <h4 class="tac m-mt-2">Surgical Services</h4>
+          <div class="tac">
+            <img src="images/non-surgical-services.webp" alt="Surgical Services" class="img-resp">
+          </div>
+          <p class="tac">Whether it's wrinkle relaxation or restoration of facial volume, we offer a wide variety of injectable treatments that are customized for each patient.  We also understand that not everyone is ready to commit to a surgical procedure. Our, no downtime, non-surgical body contouring program includes non-invasive fat removal with TruSculptID and muscle toning and sculpting with TruSculptFLEX. Stop underarm sweat and odor with a 45-minute MiraDry treatment. Additionally, we offer a full range of hair restoration procedures and laser skin resurfacing.</p>
         </div>
         <div class="grid-33 tablet-33">
-          <h4 class="tac">S + P MedSpa</h4>
-          <img src="images/S+P-MedSpa.webp" alt="S + P MedSpa" class="img-resp">
-          <p>With the busy demands of life in the DMV, it becomes increasingly difficult to give your skin the attention it deserves.  Drs. Somenek and Pittman have created the upscale S + P MedSpa which truly redefines luxury skincare.  The full-menu of services includes Signature facials, chemical peels, microneedling and laser treatments.  Maintenance procedures like laser hair removal, brow tinting and dermaplaning are also offered.  Finally, recharge and relax with a full-menu of specially formulated IV cocktails.</p>
+          <h4 class="tac m-mt-2">S + P MedSpa</h4>
+          <div class="tac">
+            <img src="images/S+P-MedSpa.webp" alt="S + P MedSpa" class="img-resp">
+          </div>
+          <p class="tac">With the busy demands of life in the DMV, it becomes increasingly difficult to give your skin the attention it deserves.  Drs. Somenek and Pittman have created the upscale S + P MedSpa which truly redefines luxury skincare.  The full-menu of services includes Signature facials, chemical peels, microneedling and laser treatments.  Maintenance procedures like laser hair removal, brow tinting and dermaplaning are also offered.  Finally, recharge and relax with a full-menu of specially formulated IV cocktails.</p>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="social">
       <div class="grid-container">
         <h2>Follow us on Social Media</h2>
-        <div class="grid-33 tablet-33">
-          <img src="images/somenekmd-ig.webp" alt="@somenekmd" class="img-resp">
+        <div class="grid-33 tablet-33 tac">
+          <a href="https://www.instagram.com/somenekmd/" target="_blank">
+            <img src="images/somenekmd-ig.webp" alt="@somenekmd" class="img-resp">
+          </a>
         </div>
-        <div class="grid-33 tablet-33">
-          <img src="images/drtroypittman-ig.webp" alt="@drtroypittman" class="img-resp">
+        <div class="grid-33 tablet-33 tac">
+          <a href="https://www.instagram.com/drtroypittman/" target="_blank">
+            <img src="images/drtroypittman-ig.webp" alt="@drtroypittman" class="img-resp">
+          </a>
         </div>
-        <div class="grid-33 tablet-33">
-          <img src="images/dcdynamicduo-ig.webp" alt="@dcdynamicduo" class="img-resp">
+        <div class="grid-33 tablet-33 tac">
+          <a href="https://www.instagram.com/dcdynamicduo/" target="_blank">
+            <img src="images/dcdynamicduo-ig.webp" alt="@dcdynamicduo" class="img-resp">
+          </a>
         </div>
       </div>
     </section>
 
     <section class="contact-footer">
-      <div class="contact-info grid-50 tablet-50">
-        <div>
-          <h2>Contact Us</h2>
-          <p>Book your complimentary consult today!</p>
-          <p>Somenek + PittmanMD - Advanced Plastic Surgery</p>
-          <p>2440 M Street NW, Suite 507 Washington, DC 20007</p>
-          <a href="">(202) 810-7700</a>
+      <div class="grid-50 tablet-50 relative">
+        <div class="contact-info">
           <div>
-            <a href="" class="btn">Join Our Mailing List</a>
+            <h2>Contact Us</h2>
+            <h4>Book your complimentary consult today!</h4>
+            <h4>Somenek + PittmanMD - Advanced Plastic Surgery</h4>
+            <address>2440 M Street NW, Suite 507 Washington, DC 20007</address>
+            <a href="" class="telephone">(202) 810-7700</a>
+            <div>
+              <div class="btn">Join Our Mailing List</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <div>
+            <h4>JOIN OUR MAILING LIST</h4>
+            <div>
+              <input typography="BodyAlpha" type="text" data-ux="InputFloatLabel" id="input13" data-aid="CONTACT_FORM_NAME" class="x-el x-el-input c2-1 c2-2 c2-30 c2-3r c2-n c2-3s c2-3t c2-3u c2-3v c2-2a c2-3w c2-3x c2-3y c2-3z c2-40 c2-3 c2-41 c2-4 c2-q c2-42 c2-2j c2-43 c2-44 c2-45 c2-46 c2-47 c2-48 c2-49 c2-4a c2-5 c2-6 c2-7 c2-8 x-d-ux x-d-aid" value="">
+            </div>
+            <div>
+              <input typography="BodyAlpha" type="text" data-ux="InputFloatLabel" id="input14" data-aid="CONTACT_FORM_EMAIL" class="x-el x-el-input c2-1 c2-2 c2-30 c2-3r c2-n c2-3s c2-3t c2-3u c2-3v c2-2a c2-3w c2-3x c2-3y c2-3z c2-40 c2-3 c2-41 c2-4 c2-q c2-42 c2-2j c2-43 c2-44 c2-45 c2-46 c2-47 c2-48 c2-49 c2-4a c2-5 c2-6 c2-7 c2-8 x-d-ux x-d-aid" value="">
+            </div>
+            <div>
+              <textarea typography="BodyAlpha" rows="4" aria-label="Message" data-ux="InputTextArea" placeholder="Message" data-aid="CONTACT_FORM_MESSAGE" class="x-el x-el-textarea c2-1 c2-2 c2-30 c2-3r c2-n c2-3s c2-3t c2-3u c2-3v c2-2a c2-23 c2-24 c2-3y c2-3z c2-40 c2-4g c2-3 c2-41 c2-4 c2-q c2-42 c2-2j c2-49 c2-4a c2-5 c2-6 c2-7 c2-8 x-d-ux x-d-aid" style="margin-top: 0px; margin-bottom: 0px; height: 154px;"></textarea>
+            </div>
+            <div class="cancel-btn">Cancel</div>
           </div>
         </div>
       </div>

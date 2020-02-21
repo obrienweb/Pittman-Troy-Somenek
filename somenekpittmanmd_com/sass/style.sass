@@ -1,5 +1,5 @@
 /*
-  Theme Name: Last, First (website.com)
+  Theme Name: Pittman, Troy Somenek (somenekpittmanmd.com)
   Author: NKP Development Team
   Description: NKP Medical responsive theme
   Template: nkpv2
@@ -20,7 +20,7 @@ $font-size: 1.6rem
 $primary-color: #1c97d4
 
 $black: #000
-$gray: #8b8b8b
+$gray: rgb(94, 94, 94)
 $white: #fff
 $blue: rgb(59, 140, 203)
 
@@ -70,6 +70,7 @@ h1, h2, h3, h4, h5
   margin: 0 0 1.5rem
   font-weight: 300
   line-height: 1.2
+  color: rgb(27, 27, 27)
 
 #main #content
   h1:not(:first-of-type), h2, h3, h4, h5
@@ -252,15 +253,11 @@ section
   background: $blue
   color: $white
   h2
+    color: $white
     &::after
       background: $white
-
-.flex-center
-  display: -webkit-flex
-  display: -ms-flex
-  display: flex
-  justify-content: center
-  flex-direction: row
+  h3, h4
+    color: $white
 
 .topbar
   background: $blue
@@ -269,14 +266,33 @@ section
   padding: .75rem 1rem
   font-size: 1.8rem
 
+.address
+  padding: 1.6rem
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: center
+  color: $gray
+  font-size: 1.8rem
+  border-bottom: 1px solid rgb(218, 218, 218)
+  &--divider
+    color: rgb(27, 27, 27)
+    margin: 0 1rem
+    opacity: 0.4
+    font-weight: 300
+
 #logo
   max-width: 770px
-  margin: auto
+  margin: 4rem auto 3rem
   text-align: center
   // image-rendering: -webkit-optimize-contrast
   // image-rendering: -moz-crisp-edges
   // image-rendering: -o-crisp-edges
   // image-rendering: crisp-edges
+
+.tagline
+  text-align: center
+  padding: 0 1.5rem
 
 #slider
   position: relative
@@ -290,75 +306,76 @@ section
   .slide1
     background-image: url(images/banner-main.jpg)
 
+.welcome
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: center
+  flex-direction: row
+  font-size: 1.8rem
+
+.doctors
+  font-weight: 600
+  font-size: 2.3rem
+  color: $gray
+  p
+    margin-top: 2rem
+    line-height: 1.5
+
 .contact-footer
   overflow: hidden
 
 .contact-info
   > div
+    padding: 4rem 0
     margin: auto
     max-width: 70%
+    > *
+      margin-bottom: 2.4rem
+  h2
+    margin-bottom: 4rem
+  h4
+    &:first-of-type
+      margin-bottom: 4rem
+  address
+    font-style: normal
+    display: block
+    color: $gray
+    font-size: 1.8rem
+  .telephone
+    font-size: 1.8rem
+  .btn
+    margin-top: 8rem
+
+.contact-form
+  background: $white
+  position: absolute
+  top: 0
+  width: 100%
+  height: 100%
+  opacity: 0
+  transform: translate3d(-120%, 0px, 0px)
+  transition: transform 0.8s ease 0s, opacity 0.1s ease 0s
+  &.transform
+    opacity: 1
+    transform: translate3d(0%, 0px, 0px)
+  > div
+    margin: auto
+    max-width: 70%
+  .cancel-btn
+    cursor: pointer
+    padding: 1rem
+    color: $blue
 
 iframe
   width: 100%
   height: 487px
 
-#main
-  padding: 40px 0
-  #content
-    position: relative
-    .feat-img
-      float: left
-      margin: 15px
-      max-width: 100%
-      height: auto
-    .single
-      float: left
-    .pagination-wrapper
-      display: flex
-    .pagination
-      margin-bottom: 2rem
-      font-size: $font-size
-      .current
-        +circle($primary-color,$white,1px solid $primary-color)
-      a
-        +circle(transparent,$primary-color,1px solid $primary-color)
-        &:hover
-          background: $primary-color
-          color: $white
-    li
-      padding: 5px
-    ul
-      margin: 15px 0 15px 20px
-      clear: none
-    ol
-      margin: 0 0 20px 20px
-      clear: none
-  .list
-    margin: 0 !important
-    list-style: none !important
-    ul
-      margin: 0 !important
-      li
-        font-size: 1.5rem
-        margin: 0
-        padding: 0 !important
-        list-style: none
-        a
-          border-bottom: 1px solid #eee
-          padding: 1rem 1.5rem
-          display: block
-          +transition(all .25s ease-out)
-          &:hover
-            color: $white
-            background: $primary-color
-            padding-left: 3rem
-      ul
-        margin-left: 2rem !important
-
 footer
   padding: 3rem 0
   border-top: 1px solid #e2e2e2
   color: rgb(89, 89, 89)
+  text-align: center
 
 .post-divider
   padding: 2rem 0
@@ -370,47 +387,103 @@ footer
     margin: 0 !important
 
 /*--- GALLERY RESPONSIVE DESKTOP
-
-.patient-content, .patient-listing
-  width: 48% !important
-  float: left
-
-.patient-list-image
-  width: 90%
-
-.patient-listing > div
-  width: 50%
-  float: left
+//
+// .patient-content, .patient-listing
+//   width: 48% !important
+//   float: left
+//
+// .patient-list-image
+//   width: 90%
+//
+// .patient-listing > div
+//   width: 50%
+//   float: left
 
 /*---- START MEDIA QUERIES ----
 @media only screen and (max-width: 767px)
   /* GALLERY RESPONSIVE NON-DESKTOP
-  #patient-listing
-    .patient-content
-      width: 100% !important
-    .patient-listing
-      width: 100% !important
-      > div
-        width: 50%
-  .patient-entry .patient-single
-    width: 100%
+  // #patient-listing
+  //   .patient-content
+  //     width: 100% !important
+  //   .patient-listing
+  //     width: 100% !important
+  //     > div
+  //       width: 50%
+  // .patient-entry .patient-single
+  //   width: 100%
+  .m-mt-2
+    margin-top: 2rem
   iframe
     width: 100%
-  .patient-single
-    width: 100% !important
+  // .patient-single
+  //   width: 100% !important
+  .btn
+    width: 100%
+    font-size: 1.4rem
+  .address
+    padding: .5rem 1.5rem
+    margin-bottom: 2rem
+    display: block
+    text-align: center
+    font-size: 1.6rem
+    border-bottom: 2px solid rgb(246, 246, 246)
+    > *
+      margin: 1rem 0
   #logo
     max-width: 216px
+  .tagline
+    font-size: 1.4rem
+  .welcome
+    display: block
+    > div
+      &:not(:first-of-type)
+        h4
+          margin-top: 2rem
+  .social
+    img
+      margin-top: 4rem
+  .contact-info
+    > div
+      padding: 4rem 1rem
+      margin: auto
+      max-width: 100%
+  .contact-footer
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    > div
+      &:first-of-type
+        order: 2
+      &:last-of-type
+        order: 1
+    iframe
+      height: 300px
   .contact-form
+    padding-top: 4rem
+    > div
+      margin: auto
+      max-width: 100%
+  .contact-form input[type=text], .contact-form input[type=email], .contact-form input[type=tel], .contact-form input[type=url], .contact-form textarea
+    width: 90%
+
+  //.contact-form
     .agreement
       margin-top: 0
 
 /*MOBILE
 
 @media only screen and (max-width: 960px) and (min-width: 768px)
+  .contact-info
+    > div
+      max-width: 100%
 
 /*TABLET
 
 @media only screen and (max-width: 1024px) and (min-width: 960px)
+  .contact-info
+    > div
+      max-width: 100%
 
 /*960 DESKTOP
 /*---- END MEDIA QUERIES ----
