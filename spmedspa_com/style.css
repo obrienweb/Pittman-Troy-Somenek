@@ -1,0 +1,302 @@
+/* Theme Name: Pittman, Troy Somenek (spmedspa.com)
+ * Author: NKP Development Team
+ * Description: NKP Medical responsive theme
+ * Template: nkpv2 */
+/*---- Do Not Remove ----*/
+@import url(https://static.nkpmedical.com/unsemantic/css/nkp.min.css);
+@import url(https://use.fontawesome.com/releases/v5.8.2/css/all.css);
+@import url(https://static.nkpmedical.com/stellarnav/stellarnav.min.css);
+/*---- Do Not Remove ----*/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 68.75em) {
+  html html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  html html {
+    font-size: 45%;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  html html {
+    font-size: 40%;
+  }
+}
+
+body {
+  font-family: "Raleway", arial, sans-serif;
+  font-size: 1.6rem;
+  color: #5e5e5e;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: #3b8ccb;
+}
+
+::-moz-selection {
+  background: #3b8ccb;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Raleway", arial, sans-serif;
+  margin: 0 0 1.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+#main #content h1:not(:first-of-type), #main #content h2, #main #content h3, #main #content h4, #main #content h5 {
+  margin-top: 4rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+p {
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+a {
+  color: #3b8ccb;
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+a:visited, a:link {
+  color: #3b8ccb;
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+a:hover {
+  color: #22567e;
+  text-decoration: none;
+}
+
+ul, ol {
+  clear: both;
+}
+
+.relative {
+  position: relative;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.fn {
+  float: none;
+  display: inline-block;
+}
+
+.tal {
+  text-align: left;
+}
+
+.tar {
+  text-align: right;
+}
+
+.tac {
+  text-align: center;
+}
+
+.clr-l {
+  clear: left;
+}
+
+.clr-r {
+  clear: right;
+}
+
+.clr, .clear {
+  clear: both;
+}
+
+.nodisp {
+  display: none;
+}
+
+/* NKP GLOBAL STYLES */
+img {
+  border: 0px;
+}
+
+.img-resp, .img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+img.left, img.alignleft {
+  float: left;
+  margin: 10px 15px 0px 0px;
+}
+
+.img-l {
+  float: left;
+  margin: 10px 15px 0px 0px;
+}
+
+img.right, img.alignright {
+  float: right;
+  margin: 10px 0px 0px 15px;
+}
+
+.img-r {
+  float: right;
+  margin: 10px 0px 0px 15px;
+}
+
+.embed {
+  position: relative;
+  display: block;
+  height: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.embed-responsive.embed-responsive-4x3 {
+  padding-bottom: 75%;
+}
+.embed-responsive.embed-responsive-16x9 {
+  padding-bottom: 56.25%;
+}
+.embed-responsive .embed-item, .embed-responsive iframe, .embed-responsive embed, .embed-responsive object {
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  border: 0px none;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.align-center {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+
+.blue-bg {
+  background: #3b8ccb;
+  color: #fff;
+}
+
+.btn {
+  background: #3b8ccb;
+  color: #fff !important;
+  padding: 1em 1em;
+  margin: 15px auto;
+  height: auto;
+  width: 100%;
+  max-width: 210px;
+  text-align: center;
+  font-size: 1.6rem;
+  font-family: "Raleway", arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  clear: both;
+  border: 0;
+  transform: perspective(1px) translateZ(0px);
+}
+
+.top-bar {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+#logo {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/*---- START MEDIA QUERIES ---- */
+@media only screen and (max-width: 767px) {
+  iframe {
+    width: 100%;
+  }
+}
+/*MOBILE */
+/*TABLET */
+/*960 DESKTOP */
+/*---- END MEDIA QUERIES ---- */
+
+/*# sourceMappingURL=style.css.map */

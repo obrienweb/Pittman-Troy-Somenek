@@ -1,0 +1,257 @@
+/*
+  Theme Name: Pittman, Troy Somenek (spmedspa.com)
+  Author: NKP Development Team
+  Description: NKP Medical responsive theme
+  Template: nkpv2
+
+@charset "UTF-8"
+
+/*---- Do Not Remove ----*/
+@import url(https://static.nkpmedical.com/unsemantic/css/nkp.min.css)
+@import url(https://use.fontawesome.com/releases/v5.8.2/css/all.css)
+@import url(https://static.nkpmedical.com/stellarnav/stellarnav.min.css)
+/*---- Do Not Remove ----*/
+
+// VARIABLES
+
+$font-stack: 'Raleway', arial, sans-serif
+$font-size: 1.6rem
+
+$primary-color: rgb(59, 140, 203)
+
+$black: #000
+$dark: rgb(27, 27, 27)
+$gray: rgb(94, 94, 94)
+$white: #fff
+$blue: rgb(59, 140, 203)
+$sky: rgb(65, 153, 222)
+
+$small: 300px
+$medium: 768px
+$tablet: 960px
+$desktop: 1024px
+$large: 1200px
+
+@function between($from, $to, $fromWidth, $toWidth)
+  $slope: ($to - $from) / ($toWidth - $fromWidth)
+  $base: $from - $slope * $fromWidth
+
+  @return calc(#{$base} + #{100vw * $slope})
+
+@import "mixins"
+
+// STLYES
+
+html
+  box-sizing: border-box
+  font-size: 62.5%
+  @media only screen and (max-width: 68.75em)
+    html
+      font-size: 50%
+  @media only screen and (max-width: 37.5em)
+    html
+      font-size: 45%
+  @media only screen and (max-width: 31.25em)
+    html
+      font-size: 40%
+
+body
+  font-family: $font-stack
+  font-size: $font-size
+  color: $gray
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+::selection
+  background: $primary-color
+
+::-moz-selection
+  background: $primary-color
+
+h1, h2, h3, h4, h5
+  font-family: $font-stack
+  margin: 0 0 1.5rem
+  font-weight: 300
+  line-height: 1.2
+
+#main #content
+  h1:not(:first-of-type), h2, h3, h4, h5
+    margin-top: 4rem
+
+h1
+  font-size: 4rem
+
+h2
+  font-size: 3.5rem
+
+h3
+  font-size: 3rem
+
+h4
+  font-size: 2.5rem
+
+h5
+  font-size: 2rem
+
+h6
+  font-size: 1.5rem
+
+p
+  padding: 1rem 0
+  line-height: 2
+
+a
+  color: $primary-color
+  text-decoration: none
+  +transition
+  &:visited, &:link
+    color: $primary-color
+    text-decoration: none
+    +transition
+  &:hover
+    color: darken($primary-color, 20%)
+    text-decoration: none
+
+ul, ol
+  clear: both
+
+.relative
+  position: relative
+
+.fl
+  float: left
+
+.fr
+  float: right
+
+.fn
+  float: none
+  display: inline-block
+
+.tal
+  text-align: left
+
+.tar
+  text-align: right
+
+.tac
+  text-align: center
+
+.clr-l
+  clear: left
+
+.clr-r
+  clear: right
+
+.clr, .clear
+  clear: both
+
+.nodisp
+  display: none
+
+/* NKP GLOBAL STYLES
+
+img
+  border: 0px
+
+.img-resp, .img-responsive
+  max-width: 100%
+  height: auto
+
+img
+  &.left, &.alignleft
+    float: left
+    margin: 10px 15px 0px 0px
+
+.img-l
+  float: left
+  margin: 10px 15px 0px 0px
+
+img
+  &.right, &.alignright
+    float: right
+    margin: 10px 0px 0px 15px
+
+.img-r
+  float: right
+  margin: 10px 0px 0px 15px
+
+.embed
+  position: relative
+  display: block
+  height: 0px
+  padding: 0px
+  overflow: hidden
+
+.embed-responsive
+  &.embed-responsive-4x3
+    padding-bottom: 75%
+  &.embed-responsive-16x9
+    padding-bottom: 56.25%
+  .embed-item, iframe, embed, object
+    top: 0px
+    bottom: 0px
+    left: 0px
+    //width: 100%
+    border: 0px none
+
+.videoWrapper
+  position: relative
+  padding-bottom: 56.25%
+  padding-top: 25px
+  height: 0
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+.flex
+  +flex
+
+.flex-center
+  +flex
+  flex-direction: column
+  justify-content: center
+  height: 100%
+
+.align-center
+  +flex
+  align-items: center
+
+.blue-bg
+  background: $blue
+  color: $white
+
+.btn
+  +btn
+
+.top-bar
+  background: $black
+  color: $white
+  text-align: center
+  padding: 1.5rem
+
+#logo
+  image-rendering: -webkit-optimize-contrast
+  image-rendering: -moz-crisp-edges
+  image-rendering: -o-crisp-edges
+  image-rendering: crisp-edges
+
+
+/*---- START MEDIA QUERIES ----
+@media only screen and (max-width: 767px)
+  iframe
+    width: 100%
+
+/*MOBILE
+
+@media only screen and (max-width: 960px) and (min-width: 768px)
+
+/*TABLET
+
+@media only screen and (max-width: 1024px) and (min-width: 960px)
+
+/*960 DESKTOP
+/*---- END MEDIA QUERIES ----
