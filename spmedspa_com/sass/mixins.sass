@@ -101,22 +101,31 @@ $px30: 1.875em
 =btn()
   background: $primary-color
   color: $white !important
-  padding: 1em 1em
+  padding: 1.6rem 3.2rem
   margin: 15px auto
   height: auto
   width: 100%
-  max-width: 210px
+  max-width: 205px
   text-align: center
-  font-size: $font-size
+  font-size: 1.8rem
   font-family: $font-stack
-  font-weight: 400
+  font-weight: 600
   font-style: normal
+  letter-spacing: 2.288px
+  text-transform: uppercase
   display: inline-block
   +box-sizing
   cursor: pointer
   clear: both
   border: 0
+  border-radius: 4px
   transform: perspective(1px) translateZ(0px)
+  transition: all .3s !important
+  &:hover, &:focus
+    background: $sky
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5)
+    transform: scale(1.02)
+    backface-visibility: hidden
 
 =circle($background,$color,$border)
   background: $background

@@ -29,29 +29,18 @@ html {
 
 body {
   font-family: "Raleway", arial, sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #5e5e5e;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-::selection {
-  background: #3b8ccb;
-}
-
-::-moz-selection {
-  background: #3b8ccb;
-}
-
 h1, h2, h3, h4, h5 {
   font-family: "Raleway", arial, sans-serif;
-  margin: 0 0 1.5rem;
-  font-weight: 300;
+  color: #1b1b1b;
+  margin: 1.5rem 0;
+  font-weight: 400;
   line-height: 1.2;
-}
-
-#main #content h1:not(:first-of-type), #main #content h2, #main #content h3, #main #content h4, #main #content h5 {
-  margin-top: 4rem;
 }
 
 h1 {
@@ -59,7 +48,23 @@ h1 {
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 4.1rem;
+  font-family: "Muli", sans-serif;
+  text-align: center;
+  position: relative;
+  margin-bottom: 3rem;
+  padding-bottom: 1.6rem;
+}
+h2::after {
+  content: "";
+  background: #1b1b1b;
+  height: 2px;
+  width: 9rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 h3 {
@@ -67,7 +72,7 @@ h3 {
 }
 
 h4 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
 }
 
 h5 {
@@ -80,7 +85,7 @@ h6 {
 
 p {
   padding: 1rem 0;
-  line-height: 2;
+  line-height: 1.5;
 }
 
 a {
@@ -106,6 +111,10 @@ a:hover {
 
 ul, ol {
   clear: both;
+}
+
+iframe {
+  width: 100%;
 }
 
 .relative {
@@ -161,6 +170,7 @@ img {
 .img-resp, .img-responsive {
   max-width: 100%;
   height: auto;
+  width: 100%;
 }
 
 img.left, img.alignleft {
@@ -218,6 +228,10 @@ img.right, img.alignright {
   height: 100%;
 }
 
+.spacer {
+  margin: 5rem 0;
+}
+
 .flex {
   display: -webkit-box;
   display: -moz-box;
@@ -246,24 +260,49 @@ img.right, img.alignright {
   align-items: center;
 }
 
+.just-center {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+}
+
+.fz21 {
+  font-size: 2.1rem;
+}
+
+.fz18 {
+  font-size: 1.8rem;
+}
+
+.fz28 {
+  font-size: 2.8rem;
+}
+
 .blue-bg {
   background: #3b8ccb;
+  color: #fff;
+  padding: 4rem 0;
+}
+.blue-bg h2, .blue-bg h3, .blue-bg h4 {
   color: #fff;
 }
 
 .btn {
   background: #3b8ccb;
   color: #fff !important;
-  padding: 1em 1em;
+  padding: 1.6rem 3.2rem;
   margin: 15px auto;
   height: auto;
   width: 100%;
-  max-width: 210px;
+  max-width: 205px;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-family: "Raleway", arial, sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
+  letter-spacing: 2.288px;
+  text-transform: uppercase;
   display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -271,14 +310,67 @@ img.right, img.alignright {
   cursor: pointer;
   clear: both;
   border: 0;
+  border-radius: 4px;
   transform: perspective(1px) translateZ(0px);
+  transition: all 0.3s !important;
+}
+.btn:hover, .btn:focus {
+  background: #4199de;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.02);
+  backface-visibility: hidden;
+}
+
+.btn--white {
+  background: #fff;
+  color: #1b1b1b !important;
+}
+.btn--white:hover, .btn--white:focus {
+  background: #fff;
+}
+
+.btn--large {
+  max-width: 452px;
 }
 
 .top-bar {
   background: #000;
   color: #fff;
   text-align: center;
-  padding: 1.5rem;
+  padding: 0.75rem;
+  font-size: 2.1rem;
+}
+
+.banner {
+  margin: 7rem 0 3.2rem;
+}
+.banner .grid-container {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  max-width: 1280px;
+  position: relative;
+}
+.banner .blue-bg {
+  text-align: center;
+}
+.banner hr {
+  background: #1b1b1b;
+  height: 2px;
+  width: 90px;
+  margin: 2rem auto;
+}
+.banner #logo {
+  margin: 7rem 0;
+}
+.banner .btn {
+  max-width: 330px;
+}
+.banner--image img {
+  width: 100%;
+  height: 100%;
+  min-width: 350px;
+  object-fit: cover;
 }
 
 #logo {
@@ -287,16 +379,114 @@ img.right, img.alignright {
   image-rendering: -o-crisp-edges;
   image-rendering: crisp-edges;
 }
+#logo img {
+  width: 400px;
+}
+
+.social a {
+  margin: 2rem;
+}
+.social svg {
+  width: 5rem;
+  height: 5rem;
+  fill: #3b8ccb;
+}
+
+.box {
+  padding: 7.2rem 4rem;
+  text-align: center;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box h3 {
+  color: #fff;
+  font-size: 3.7rem;
+}
+.box p {
+  font-size: 2.5rem;
+}
+
+.skin-con {
+  background-image: linear-gradient(rgba(22, 22, 22, 0.24) 0%, rgba(22, 22, 22, 0.24) 100%), url(images/spa-mask.jpg);
+}
+
+.bridal-con {
+  background-image: linear-gradient(rgba(22, 22, 22, 0.24) 0%, rgba(22, 22, 22, 0.24) 100%), url(images/spa-set.jpg);
+}
+
+.team-img {
+  border-radius: 50%;
+  width: 223px;
+  margin-bottom: 2rem;
+}
+
+footer {
+  margin: 6rem 0;
+  font-size: 2.1rem;
+}
+footer .grid-container {
+  padding-top: 7rem;
+  border-top: 1px solid #e2e2e2;
+}
+footer strong, footer address {
+  color: #1b1b1b;
+}
+footer address {
+  font-style: normal;
+}
+footer p {
+  padding: 0.5rem 0;
+}
 
 /*---- START MEDIA QUERIES ---- */
 @media only screen and (max-width: 767px) {
-  iframe {
-    width: 100%;
+  .just-center {
+    display: block;
+  }
+
+  .banner {
+    margin: 1.6rem 0;
+  }
+  .banner .grid-container {
+    display: block;
+  }
+  .banner #logo {
+    max-width: 224px;
+    margin: auto;
+  }
+
+  .help .flex {
+    display: block;
   }
 }
 /*MOBILE */
+@media only screen and (max-width: 960px) and (min-width: 768px) {
+  .banner .grid-container {
+    display: block;
+  }
+  .banner #logo {
+    max-width: 224px;
+    margin: auto;
+  }
+}
 /*TABLET */
+@media only screen and (max-width: 1024px) and (min-width: 960px) {
+  .banner .grid-container {
+    display: block;
+  }
+  .banner #logo {
+    max-width: 224px;
+    margin: auto;
+  }
+}
 /*960 DESKTOP */
+@media only screen and (max-width: 1260px) and (min-width: 1025px) {
+  .banner #logo {
+    max-width: 320px;
+    margin: auto;
+  }
+}
 /*---- END MEDIA QUERIES ---- */
 
 /*# sourceMappingURL=style.css.map */

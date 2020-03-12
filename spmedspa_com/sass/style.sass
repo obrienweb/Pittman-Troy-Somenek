@@ -57,38 +57,50 @@ html
 
 body
   font-family: $font-stack
-  font-size: $font-size
+  font-size: 1.8rem
   color: $gray
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
-::selection
-  background: $primary-color
-
-::-moz-selection
-  background: $primary-color
+// ::selection
+//   background: $primary-color
+//
+// ::-moz-selection
+//   background: $primary-color
 
 h1, h2, h3, h4, h5
   font-family: $font-stack
-  margin: 0 0 1.5rem
-  font-weight: 300
+  color: $dark
+  margin: 1.5rem 0
+  font-weight: 400
   line-height: 1.2
-
-#main #content
-  h1:not(:first-of-type), h2, h3, h4, h5
-    margin-top: 4rem
 
 h1
   font-size: 4rem
 
 h2
-  font-size: 3.5rem
+  font-size: 4.1rem
+  font-family: 'Muli', sans-serif
+  text-align: center
+  position: relative
+  margin-bottom: 3rem
+  padding-bottom: 1.6rem
+  &::after
+    content: ''
+    background: $dark
+    height: 2px
+    width: 9rem
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
 
 h3
   font-size: 3rem
 
 h4
-  font-size: 2.5rem
+  font-size: 2.8rem
 
 h5
   font-size: 2rem
@@ -98,7 +110,7 @@ h6
 
 p
   padding: 1rem 0
-  line-height: 2
+  line-height: 1.5
 
 a
   color: $primary-color
@@ -114,6 +126,9 @@ a
 
 ul, ol
   clear: both
+
+iframe
+  width: 100%
 
 .relative
   position: relative
@@ -157,6 +172,7 @@ img
 .img-resp, .img-responsive
   max-width: 100%
   height: auto
+  width: 100%
 
 img
   &.left, &.alignleft
@@ -207,6 +223,9 @@ img
     width: 100%
     height: 100%
 
+.spacer
+  margin: 5rem 0
+
 .flex
   +flex
 
@@ -220,38 +239,166 @@ img
   +flex
   align-items: center
 
+.just-center
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: center
+
+.fz21
+  font-size: 2.1rem
+
+.fz18
+  font-size: 1.8rem
+
+.fz28
+  font-size: 2.8rem
+
 .blue-bg
   background: $blue
   color: $white
+  padding: 4rem 0
+  h2, h3, h4
+    color: $white
 
 .btn
   +btn
+
+.btn--white
+  background: $white
+  color: $dark !important
+  &:hover, &:focus
+    background: $white
+
+.btn--large
+  max-width: 452px
 
 .top-bar
   background: $black
   color: $white
   text-align: center
-  padding: 1.5rem
+  padding: .75rem
+  font-size: 2.1rem
+
+.banner
+  margin: 7rem 0 3.2rem
+  .grid-container
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    max-width: 1280px
+    position: relative
+  .blue-bg
+    text-align: center
+  hr
+    background: $dark
+    height: 2px
+    width: 90px
+    margin: 2rem auto
+  #logo
+    margin: 7rem 0
+  .btn
+    max-width: 330px
+  &--image
+    img
+      width: 100%
+      height: 100%
+      min-width: 350px
+      object-fit: cover
 
 #logo
   image-rendering: -webkit-optimize-contrast
   image-rendering: -moz-crisp-edges
   image-rendering: -o-crisp-edges
   image-rendering: crisp-edges
+  img
+    width: 400px
 
+.social
+  a
+    margin: 2rem
+  svg
+    width: 5rem
+    height: 5rem
+    fill: $blue
+
+.box
+  padding: 7.2rem 4rem
+  text-align: center
+  color: $white
+  background-repeat: no-repeat
+  background-size: cover
+  h3
+    color: $white
+    font-size: 3.7rem
+  p
+    font-size: 2.5rem
+
+.skin-con
+  background-image: linear-gradient(rgba(22, 22, 22, 0.24) 0%, rgba(22, 22, 22, 0.24) 100%), url(images/spa-mask.jpg)
+
+.bridal-con
+  background-image: linear-gradient(rgba(22, 22, 22, 0.24) 0%, rgba(22, 22, 22, 0.24) 100%), url(images/spa-set.jpg)
+
+.team-img
+  border-radius: 50%
+  width: 223px
+  margin-bottom: 2rem
+
+footer
+  margin: 6rem 0
+  font-size: 2.1rem
+  .grid-container
+    padding-top: 7rem
+    border-top: 1px solid #e2e2e2
+  strong, address
+    color: $dark
+  address
+    font-style: normal
+  p
+    padding: .5rem 0
 
 /*---- START MEDIA QUERIES ----
 @media only screen and (max-width: 767px)
-  iframe
-    width: 100%
+  .just-center
+    display: block
+  .banner
+    margin: 1.6rem 0
+    .grid-container
+      display: block
+    #logo
+      max-width: 224px
+      margin: auto
+  .help
+    .flex
+      display: block
 
 /*MOBILE
 
 @media only screen and (max-width: 960px) and (min-width: 768px)
+  .banner
+    .grid-container
+      display: block
+    #logo
+      max-width: 224px
+      margin: auto
 
 /*TABLET
 
 @media only screen and (max-width: 1024px) and (min-width: 960px)
+  .banner
+    .grid-container
+      display: block
+    #logo
+      max-width: 224px
+      margin: auto
 
 /*960 DESKTOP
+
+@media only screen and (max-width: 1260px) and (min-width: 1025px)
+  .banner
+    #logo
+      max-width: 320px
+      margin: auto
+
 /*---- END MEDIA QUERIES ----
